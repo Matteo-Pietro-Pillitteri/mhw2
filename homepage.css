@@ -1,0 +1,462 @@
+/*codice css del mhw1 con eventuali modifiche*/
+
+:root{
+  --color-green: rgba(0, 189, 79, 0.877);
+  --color-magenta: rgba(160, 0, 53, 0.863);
+  --color-violet: #660099a9;
+}
+
+body{
+  background-color: #2e2e2e;
+  margin: 0;
+  font-size: 35px;
+  font-family: 'Roboto', Helvetica;
+  color: black; /* di default*/
+  font-style: normal; /* di default*/
+  font-weight: normal;/* di default*/
+}
+
+@media(max-width: 500px){
+  body{
+    font-size: 27px;
+  }
+}
+
+a{
+  cursor: pointer;
+}
+
+nav{
+  height: 80px;
+  background-color: var(--color-violet);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 3px solid var(--color-green);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Orbitron', Courier;
+  font-weight: lighter;
+  /*font-size: 1em; e' implicito perche ereditato */
+  /* implicit --> color: black*/
+  /* font-style: normal e' implicito perche' ereditato */
+  
+}
+
+@media (max-width: 767px){
+  nav{
+    height: 260px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    top: 3%;
+    left: 83%; 
+    border-top: 2px solid var(--color-green); 
+    border-left: 2px solid var(--color-green);
+    border-bottom: 2px solid var(--color-green);
+    border-radius: 11px;
+  }
+}
+
+#dino{
+  display: flex;
+  align-items: center;
+  font-weight: normal;
+  /*font-size: e' ereditato */
+  /*implicit--> color: black*/ 
+  /*font-style: normal; e' implicito perche e' ereditato  */
+}
+
+@media(max-width: 927px){
+  #dino{
+    font-size: 0.7em;
+  } 
+}
+
+@media (max-width: 500px){
+  #dino{
+    font-size: 0.5em;
+    flex-direction: column;
+    font-weight: bold;
+  }
+}
+
+#logo {
+  height: 60px;
+  width: 60px;
+} 
+
+@media(max-width: 927px){
+  #logo{
+    height: 43px; 
+    width: 43px;
+  }
+}
+
+@media (max-width: 500px){
+  #logo{
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.links a{
+  color: white;
+  font-size: 0.5em;
+  /*font-style: normal; e' implicito perche e' ereditato  */
+  /*font-weight: lighter; e' ereditato */
+  border: 2.3px solid white;
+  border-radius: 12px;
+  background-color: rgba(0,0,0,0.5);
+  margin-right: 11px;
+  padding: 11px;
+}
+
+
+@media(max-width: 927px){
+  .links a{
+    margin-right: 7px;
+    padding: 9px;
+    border: 1.9px solid white;
+  }
+}
+
+@media (max-width: 500px){
+  .links a{
+    padding: 2px;
+    border: none;
+    border-bottom: 1.8px solid white;
+    border-radius: 3px;
+    margin-right: 2px;
+    margin-left: 2px;
+    margin-top: 5px;
+  }
+}
+
+@media(max-width: 500px){
+  .links{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+}
+
+.links a:hover{
+  background-color: rgba(52, 167, 129, 0.322);
+  font-style: italic;
+ 
+}
+
+#click{
+  
+  border: 3px solid lightgreen;
+  color: lightgreen;
+    /*font-size:  e' ereditato*/
+  /*font-style: normal; e' implicito perche e' ereditato  */
+  /*font-weight: lighter*/
+}
+
+@media (max-width: 500px){
+  #click{
+    border: none;
+    border-bottom: 1.8px solid lightgreen;
+  }
+}
+
+#click:hover{
+  background-color: rgba(52, 167, 129, 0.322);
+}
+
+section{
+  font-family: 'Lora', Arial;
+  color: lightgray;
+  text-align: center;
+  font-size: 0.9em;
+  font-weight: lighter; 
+  /*font-style: normal; e' impicito perche e' ereditato da body*/
+  background-color: #242323;
+  margin-bottom: 50px;
+  margin-left: 120px;
+  margin-right: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+}
+
+@media (max-width: 500px){
+  section{
+    margin-bottom: 25px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+}
+
+section a:hover{
+  color: rgba(0, 189, 79, 0.877);
+}
+
+section p{
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+section p a{
+  text-decoration: underline;
+  font-style: oblique;
+  font-weight: bold;
+    /*font-size:  e' ereditato*/
+   /*color: e' ereditato*/
+}
+
+section h3{
+  line-height: 2px;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#introduction{
+  margin-top: 50px;
+  margin-left: 70px;
+  margin-right: 70px;
+  /*implicit color: lightgray;*/
+  font-size: 0.8em;
+  font-family:  'Turret Road',Arial;
+  /*text-align: center e' implicito perche  ereditato */
+  /*font-weight: lighter --> e' ereditato*/
+  opacity: 90%;
+}
+
+@media (max-width: 500px){
+  #introduction{
+    margin-left: 30px;
+    margin-right: 30px; 
+  }
+}
+
+#introduction h1{
+  font-style: italic;
+  font-weight: bold;
+  /*font-size e color sono ereditati*/
+}
+
+.blockinsection{
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-family: 'Lato', Arial;
+  line-height: 1.2;
+  font-weight: normal;
+  font-size: 0.7em;
+   /*font style e' ereditato*/
+  /*text-align: center e' implicito perche ereditato */
+  /* implicit color: lightgray; */
+}
+
+.blockinsection img{ 
+  border: 3px solid var(--color-green);
+  border-radius: 15px;
+  width: 500px;
+  height: 380px; 
+}
+
+@media (max-width: 750px){
+  .blockinsection img{ 
+  width: 210px;
+  height: 150px;
+  }
+} 
+
+#sottosezione{
+  display: flex;
+  justify-content: space-between;
+  /* implicit color: lightgray; */ 
+  color: #cececeec;
+  font-family: 'Alef', Helvetica;
+  font-size: 0.6em;
+  font-weight: normal;
+  /*font-style ereditato */
+  text-align: left;
+  border: 3px solid var(--color-green);
+  border-radius: 15px;
+  padding: 10px;
+  }
+
+@media (max-width: 500px){ 
+  #sottosezione{ 
+    flex-direction: column; 
+  }
+}
+
+.icon{
+  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  margin-left: 5px;
+  cursor: pointer;
+ 
+}
+
+
+@media (max-width: 500px){
+  .icon{
+    height: 25px;
+    width: 25px;
+  }
+}
+
+header::before{
+  content: '';
+  position: absolute; /*fa riferimento all'header che ha position: relative*/
+  background-color: rgba(0, 0, 0, 0.3);
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  border-radius: 20px;
+}
+
+header{ 
+  position: relative;
+  height: 500px;
+  background-image: url(https://i.pinimg.com/originals/7d/bc/1f/7dbc1f3a9aae49f669776aad913e4d30.gif);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 1700px 900px;
+  background-position-y: -100px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 3px solid var(--color-green);
+  border-radius: 20px;
+}
+
+@media(max-width: 500px){
+  header{
+    height: 250px;
+    background-size: 500px 450px;
+  }
+}
+
+header h1{
+  margin-top: 80px; 
+  text-align: center;
+  color: rgba(0, 173, 168, 0.863);
+  font-family: 'Audiowide', cursive;
+  font-size: 1em; 
+  /*font-style: normal e' implicito perche e' ereditato */
+  /*font-weight e' ereditato*/
+  line-height: 1.5;
+  z-index: 1;
+  text-shadow: 3px 7px var(--color-magenta);
+}
+
+@media (max-width: 500px){
+  header h1{
+    margin-top: 40px;
+    line-height: 1.1;
+    text-shadow: 1.5px 3.5px var(--color-magenta);
+    font-size: 0.7em;
+  }
+}
+
+header h1 strong{
+  font-size: 2.5em;
+}
+
+
+#button{
+  font-size: 0.6em;
+  border-radius: 15px;
+  padding: 8px;
+  background-color: var(--color-magenta);
+}
+
+@media (max-width: 500px){
+  #button{
+    padding: 4px;
+  }
+}
+
+#button:hover{
+  background-color: rgba(160, 0, 53, 0.377);
+}
+
+
+footer{ 
+  color: rgba(231, 230, 230, 0.993);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--color-violet);
+  font-family: 'Montserrat', Lucida Console;
+  font-size: 0.4em;
+  font-style: normal; /*default*/
+  font-weight: lighter;
+  letter-spacing: 3px;
+  border-top: 3px solid var(--color-green);
+  border-radius: 20px;
+}
+
+#infooter{
+  display: flex;
+  justify-content: space-around;
+  background-color: #242323; 
+  width: 100%;
+  font-size: 0.9em; /* in riferimento al font-size del footer*/
+  /* implicit color: rgba(194, 194, 194, 0.986);*/
+  /*font style: normal e' ereditato*/
+  /*font-weight: lighter e' ereditato;*/
+  letter-spacing: 2px;
+  border-radius: 20px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+@media (max-width: 500px){
+  #infooter{
+    flex-direction: column; 
+  }
+}
+
+#infooter h3{
+  border-bottom: 1px solid rgba(211, 211, 211, 0.493);
+  border-radius: 4px;
+  font-style: italic;
+}
+
+@media (max-width: 500px){
+  #infooter h3,
+  #infooter p,
+  #infooter a{
+    font-size: 1.3em;
+    margin-left: 5px;
+  }
+} 
+
+
+#information{
+  padding: 15px;
+  color: rgba(194, 194, 194, 0.925);
+  /*text-align: center e' implicito perche' ereditato*/
+  /*font-size: 1em; e' implicito perche' ereditato*/
+  font-style: italic;
+  font-weight: bold;
+}
+ 
+#information a{
+  margin-left: 30px;
+  border-bottom: 1px solid rgba(211, 211, 211, 0.493);
+  border-radius: 4px;
+}
+
+@media (max-width: 500px){
+  #information a{
+  margin-left: 5px;
+  }
+}
